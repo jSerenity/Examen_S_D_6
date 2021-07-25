@@ -49,10 +49,12 @@ public class tablas {
 
     public static final String TABLA_CARRITO="carrito";
     public static final String ID_MENU="idMenu";
+    public static final String CAMPO_CANTIDAD="cantidad";
 
     public static final String CREAR_TABLA_CARRITO="CREATE TABLE " + ""+TABLA_CARRITO+" "+
             "("+CAMPO_ID+" "+"INTEGER primary key autoincrement, "
-            +ID_MENU+" " +"INTEGER) ";
-
+            +ID_MENU+" " +"INTEGER, "
+            +CAMPO_NOMBRE+" " +"TEXT, "
+            +CAMPO_CANTIDAD+" " +"INTEGER) ";
 }
 
