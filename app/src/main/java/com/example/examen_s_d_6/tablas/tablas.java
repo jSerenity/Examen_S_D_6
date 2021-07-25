@@ -42,17 +42,21 @@ public class tablas {
 
     public static final String TABLA_PEDIDOS="pedidos";
     public static final String CAMPO_FECHA="fecha";
+    public static final String CAMPO_TOTAL="total";
 
     public static final String CREAR_TABLA_PEDIDO="CREATE TABLE " + ""+TABLA_PEDIDOS+" "+
-            "("+CAMPO_ID+" " +"INTEGER primary key autoincrement, "+CAMPO_FECHA+" TEXT)";
+            "("+CAMPO_ID+" " +"INTEGER primary key autoincrement, "+CAMPO_FECHA+" TEXT, "+
+            CAMPO_TOTAL+ " REAL)";
 
 
     public static final String TABLA_CARRITO="carrito";
     public static final String ID_MENU="idMenu";
+    public static final String CAMPO_CANTIDAD="cantidad";
 
     public static final String CREAR_TABLA_CARRITO="CREATE TABLE " + ""+TABLA_CARRITO+" "+
             "("+CAMPO_ID+" "+"INTEGER primary key autoincrement, "
-            +ID_MENU+" " +"INTEGER) ";
-
+            +ID_MENU+" " +"INTEGER, "
+            +CAMPO_NOMBRE+" " +"TEXT, "
+            +CAMPO_CANTIDAD+" " +"INTEGER) ";
 }
 

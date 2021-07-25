@@ -4,12 +4,22 @@ public class menu {
     private Integer ID;
     private String nombre;
     private String descripcion;
-    private Float precio;
-    private byte imagen;
+    private double precio;
+    private int imagen;
     private String tipo;
     public menu(){
 
     }
+
+    public menu(Integer ID, String nombre, String descripcion, double precio, int imagen, String tipo) {
+        this.ID = ID;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.imagen = imagen;
+        this.tipo = tipo;
+    }
+
     public Integer getID() {
         return ID;
     }
@@ -34,7 +44,7 @@ public class menu {
         this.descripcion = descripcion;
     }
 
-    public Float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
@@ -42,7 +52,7 @@ public class menu {
         this.precio = precio;
     }
 
-    public byte getImagen() {
+    public int getImagen() {
         return imagen;
     }
 

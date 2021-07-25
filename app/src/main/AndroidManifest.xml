@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Examen_S_D_6">
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".LastPedidosActivity"></activity>
+        <activity android:name=".VerProductosActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".registro" />
         <activity android:name=".MainActivity">
             <intent-filter>
