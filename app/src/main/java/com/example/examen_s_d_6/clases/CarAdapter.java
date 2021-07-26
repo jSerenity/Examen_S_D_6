@@ -40,7 +40,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
     public CarViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.layout_products, null);
+        View view = inflater.inflate(R.layout.layout_crear_pedido, null);
         return new CarViewHolder(view);
     }
 
@@ -51,7 +51,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.CarViewHolder> {
 
         //binding the data with the viewholder views
         holder.textViewNombre.setText(product.getNombre());
-        holder.textViewCantidad.setText(product.getCantidad());
+        holder.textViewCantidad.setText(String.valueOf(product.getCantidad()));
         holder.textViewTotal.setText(String.valueOf(product.getTotal()));
        /* holder.textViewPrice.setText("B/. "+String.valueOf(product.getPrecio()));
         holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImagen()));

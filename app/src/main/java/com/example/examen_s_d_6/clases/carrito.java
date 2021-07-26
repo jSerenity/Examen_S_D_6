@@ -3,6 +3,13 @@ package com.example.examen_s_d_6.clases;
 public class carrito {
     private  int id;
     private  int idMenu;
+
+    public carrito(int cantidad, String nombre, float total) {
+        this.cantidad = cantidad;
+        this.nombre = nombre;
+        this.total = total;
+    }
+
     private  int cantidad;
     private  String nombre;
     private  float total;

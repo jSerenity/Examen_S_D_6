@@ -17,6 +17,8 @@ import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+
 public class HomeContentFragment extends Fragment {
 
   private static final String TEXT = "text";
@@ -87,6 +89,18 @@ public class HomeContentFragment extends Fragment {
         startActivity(intent);
       }
     });
+    ExtendedFloatingActionButton buttonCrearpedido = (ExtendedFloatingActionButton) layout.findViewById(R.id.crearpedido);
+    buttonCrearpedido.setOnClickListener(new View.OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        Toast.makeText(v.getContext(), getString(R.string.crearpedido),Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), CrearPedidoActivity.class);
+        startActivity(intent);
+      }
+    });
+
 
     return layout;
   }

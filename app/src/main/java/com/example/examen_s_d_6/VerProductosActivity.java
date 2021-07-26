@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -65,7 +66,17 @@ public class VerProductosActivity extends AppCompatActivity {
 
             }
         });
-
+        ExtendedFloatingActionButton buttonCrearpedido = (ExtendedFloatingActionButton) this.findViewById(R.id.crearpedidoVer);
+        buttonCrearpedido.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(v.getContext(), getString(R.string.crearpedido),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(VerProductosActivity.this, CrearPedidoActivity.class);
+                startActivity(intent);
+            }
+        });
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
     }
@@ -158,12 +169,19 @@ public class VerProductosActivity extends AppCompatActivity {
     }
 
     private long addCar(menu item)
-    { SQLiteDatabase db = conn.getWritableDatabase();
+    {   SQLiteDatabase db = conn.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(tablas.ID_MENU, item.getID());
-        values.put(tablas.CAMPO_NOMBRE, item.getNombre().toString());
-        values.put(tablas.CAMPO_CANTIDAD, 1);
-
-        return db.insert(tablas.TABLA_CARRITO, tablas.CAMPO_ID,values);
+        long result=0;
+        try {
+            values.put(tablas.ID_MENU, item.getID());
+            values.put(tablas.CAMPO_NOMBRE, item.getNombre().toString());
+            values.put(tablas.CAMPO_CANTIDAD, 1);
+            values.put(tablas.CAMPO_PRECIO, item.getPrecio());
+            result= db.insert(tablas.TABLA_CARRITO, tablas.CAMPO_ID,values);
+        }catch (Exception e){
+            String A =e.toString();
+        }
+        db.close();
+        return result;
     }
 }

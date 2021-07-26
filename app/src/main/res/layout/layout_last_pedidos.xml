@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -13,37 +13,37 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:padding="8dp">
-
-
-        <TextView
-                android:id="@+id/textViewCantidad"
+            <TextView
+                android:id="@+id/textViewNumero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:text="1x"
+                android:text="#1"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textStyle="bold" />
+                android:textColor="#000000"  android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/textViewNombre"
+                android:id="@+id/textViewFecha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_toRightOf="@id/textViewCantidad"
-                android:text="nombre del platillo"
+                android:layout_toRightOf="@id/textViewNumero"
+                android:text="10-07-2021"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                 android:textColor="#000000" />
 
             <TextView
-                android:id="@+id/textViewTotal"
+                android:id="@+id/textViewTotalPedido"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/textViewNombre"
-                android:layout_marginLeft="180dp"
-                android:text="10.00"
+                android:layout_marginLeft="150dp"
+                android:layout_toRightOf="@id/textViewFecha"
+                android:text="21.30"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+
 
         </RelativeLayout>
 

@@ -116,7 +116,7 @@ public class registro extends AppCompatActivity {
         boolean result=false;
         ContentValues values = new ContentValues();
         values.put(tablas.CAMPO_NOMBRE, name);
-        values.put(tablas.CAMPO_EMAIL, email);
+        values.put(tablas.CAMPO_EMAIL, email.toUpperCase());
         values.put(tablas.CAMPO_PHONE, phone);
         values.put(tablas.CAMPO_PASSWORD, password);
         long id = db.insert(tablas.TABLA_USUARIOS, tablas.CAMPO_ID,values);

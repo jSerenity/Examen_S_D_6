@@ -21,9 +21,9 @@ public class AppSQLiteOpenHepler extends SQLiteOpenHelper {
         db.execSQL(tablas.CREAR_TABLA_USUARIOS);
         db.execSQL(tablas.CREAR_TABLA_MENU);
         db.execSQL(tablas.CREAR_TABLA_CARRITO);
-        db.execSQL(tablas.CREAR_TABLA_CATE);
+       // db.execSQL(tablas.CREAR_TABLA_CATE);
         db.execSQL(tablas.CREAR_TABLA_PEDIDO);
-        creatData(db);
+        //creatData(db);
     }
 
     @Override
@@ -32,7 +32,7 @@ public class AppSQLiteOpenHepler extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE IF EXISTS " + tablas.CREAR_TABLA_USUARIOS);
             db.execSQL("DROP TABLE IF EXISTS " + tablas.CREAR_TABLA_MENU);
             db.execSQL("DROP TABLE IF EXISTS " + tablas.CREAR_TABLA_CARRITO);
-            db.execSQL("DROP TABLE IF EXISTS " + tablas.CREAR_TABLA_CATE);
+            //db.execSQL("DROP TABLE IF EXISTS " + tablas.CREAR_TABLA_CATE);
             db.execSQL("DROP TABLE IF EXISTS " + tablas.CREAR_TABLA_PEDIDO);
             onCreate(db);
         } catch (SQLException e) {

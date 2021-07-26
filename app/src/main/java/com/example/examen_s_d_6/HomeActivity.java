@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.examen_s_d_6.clases.LastPedidosAdapter;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity
@@ -73,11 +74,11 @@ public class HomeActivity extends AppCompatActivity
                 break;
             case R.id.nav_pedidos:
                 title = R.string.menu_pedidos;
-                fragment = pedidiosFragment.newInstance(getString(title),"");
+                fragment = LastPedidosActivity.newInstance(getString(title));
                 break;
             case R.id.nav_sucursales:
                 title = R.string.menu_sucursales;
-                fragment = HomeContentFragment.newInstance(getString(title));
+                fragment = SucucrsalesFragment.newInstance(getString(title),"");
                 break;
             default:
                 throw new IllegalArgumentException("menu option not implemented!!");

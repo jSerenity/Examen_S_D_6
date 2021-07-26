@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         boolean result=false;
         SQLiteDatabase db=conn.getReadableDatabase();
         Cursor cursor=db.rawQuery("SELECT nombre, password  FROM "+ tablas.TABLA_USUARIOS +" WHERE "
-                + tablas.CAMPO_EMAIL +"=" +"'"+email+"'" + " AND "+ tablas.CAMPO_PASSWORD+"="+"'"+password+"'",null);
+                + tablas.CAMPO_EMAIL +"=" +"'"+email.toUpperCase()+"'" + " AND "+ tablas.CAMPO_PASSWORD+"="+"'"+password+"'",null);
 
         if (cursor != null) {
             if(cursor.getCount() > 0){
