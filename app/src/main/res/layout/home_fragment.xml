@@ -148,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|bottom"
             android:contentDescription="agregar al pedido"
-            android:text="@string/crearpedido"
+            android:text="@string/verpedido"
             android:theme="@style/MyMaterialTheme"
             app:icon="@drawable/baseline_shopping_cart_24" />
     </LinearLayout>

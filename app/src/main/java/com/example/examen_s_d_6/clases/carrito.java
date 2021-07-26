@@ -5,6 +5,14 @@ public class carrito {
     private  int idMenu;
     private  int cantidad;
     private  String nombre;
+    private  float total;
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
 
     public int getCantidad() {
         return cantidad;

@@ -27,6 +27,7 @@
     <string name="menu_almu">Almuerzos</string>
     <string name="menu_desa">Desayunos</string>
     <string name="crearpedido">Crear pedido</string>
+    <string name="verpedido">Ver pedido</string>
     <string name="addmenu">Agregar</string>
 
 </resources>
